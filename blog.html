@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — RaadselKamer | Escape Room Rotterdam</title>
+  <meta name="description" content="Tips, escape room strategieen en nieuws van RaadselKamer Rotterdam. Ontdek hoe je puzzels kraakt en welke kamers nieuw zijn.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="logo">Raadsel<span>Kamer</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html#diensten">Kamers</a>
+      <a href="index.html#over-ons">Over Ons</a>
+      <a href="index.html#galerij">Galerij</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="blog.html" style="color:var(--orange);">Blog</a>
+      <a href="index.html#contact" class="nav-cta">Boek Nu</a>
+    </nav>
+    <div class="nav-toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ BLOG HERO ============ -->
+<section class="blog-hero">
+  <div class="container">
+    <div class="reveal">
+      <div style="display:inline-flex;align-items:center;gap:8px;color:var(--orange);font-size:0.75rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">
+        <i data-lucide="book-open" style="width:16px;height:16px;"></i>
+        Escape Room Insights
+      </div>
+      <h1>Het <span class="accent">RaadselKamer</span> Blog</h1>
+      <p>Tips, achtergronden en nieuws uit de wereld van escape rooms in Rotterdam.</p>
+    </div>
+    <div class="blog-categories reveal">
+      <span class="blog-cat active">Alles</span>
+      <span class="blog-cat">Strategieen</span>
+      <span class="blog-cat">Achter de Schermen</span>
+      <span class="blog-cat">Nieuws</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BLOG GRID ============ -->
+<section class="section" style="background:var(--cream);padding-top:0;">
+  <div class="container">
+    <div class="blog-grid">
+
+      <article class="blog-card reveal stagger-1">
+        <div class="blog-card-img">
+          <img src="images/hero.jpg" alt="Nieuwe kamer De Bunker" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Nieuws</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>10 apr 2026</span>
+          </div>
+          <h3>Nieuwe Kamer: De Bunker Opent 1 Mei</h3>
+          <p>Onze zesde kamer neemt je mee naar een verlaten WOII-bunker onder Rotterdam. Authentieke props, verborgen gangen en puzzels gebaseerd op echte codeergeschiedenis. Een preview.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-2">
+        <div class="blog-card-img">
+          <img src="images/about.jpg" alt="Escape room communicatie tips" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Strategieen</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>4 apr 2026</span>
+          </div>
+          <h3>De #1 Fout Die Teams Maken in Escape Rooms</h3>
+          <p>Na duizenden sessies weten onze gamemasters precies waarom teams falen. Het antwoord is niet puzzelvaardigheid — het is communicatie. Zo voorkom je de meest gemaakte fout.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-3">
+        <div class="blog-card-img">
+          <img src="images/detail.jpg" alt="Puzzelontwerp achter de schermen" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Achter de Schermen</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>28 mrt 2026</span>
+          </div>
+          <h3>Van Sketch tot Slot: Hoe Een Escape Room Ontstaat</h3>
+          <p>Het bouwen van een escape room kost 6 maanden en tientallen iteraties. Wij laten je het volledige proces zien — van eerste concept tot de allereerste testgroep.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-4">
+        <div class="blog-card-img">
+          <img src="images/craft.jpg" alt="Teambuilding escape room" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Strategieen</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>21 mrt 2026</span>
+          </div>
+          <h3>Escape Room als Teambuilding: Wat Wetenschap Zegt</h3>
+          <p>Recente studies tonen aan dat escape rooms specifieke soft skills versterken. Van psychologische veiligheid tot creatief denken: zo benut je het maximale voor je bedrijf.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-5">
+        <div class="blog-card-img">
+          <img src="images/kitchen.jpg" alt="Beste escape rooms Rotterdam" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Nieuws</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>14 mrt 2026</span>
+          </div>
+          <h3>RaadselKamer Verkozen tot Beste Escape Room van Rotterdam</h3>
+          <p>Voor het derde jaar op rij zijn wij door bezoekers verkozen tot de beste escape room van Rotterdam. Een terugblik op wat ons anders maakt en wat er nog komen gaat.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+      <article class="blog-card reveal stagger-6">
+        <div class="blog-card-img">
+          <img src="images/carousel.jpg" alt="Escape room voor beginners" loading="lazy">
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-card-meta">
+            <span class="blog-tag">Strategieen</span>
+            <span><i data-lucide="calendar" style="width:12px;height:12px;display:inline;vertical-align:middle;margin-right:4px;"></i>7 mrt 2026</span>
+          </div>
+          <h3>Je Eerste Escape Room: Wat Kun Je Verwachten?</h3>
+          <p>Nog nooit een escape room gedaan? Geen stress. Wij vertellen je precies wat je kunt verwachten, wat je moet meenemen en welke kamer het beste past bij beginners.</p>
+          <a href="#" class="blog-read-more">Lees meer <i data-lucide="arrow-right" style="width:14px;height:14px;"></i></a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="container">
+    <div class="reveal">
+      <h2>Genoeg <span class="accent">Gelezen</span>?</h2>
+      <p>Boek nu je escape room en ervaar het zelf. Theory is nice, practice is better.</p>
+      <a href="index.html#contact" class="btn-primary" style="margin:0 auto;">
+        <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+        Boek Nu
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Raadsel<span>Kamer</span></a>
+        <p>De populairste escape room van Rotterdam. Puzzels kraken, samenwerken en ontsnappen in thematische kamers.</p>
+        <div style="display:flex;gap:12px;margin-top:20px;">
+          <a href="#" style="width:36px;height:36px;background:rgba(234,88,12,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--orange);"><i data-lucide="instagram" style="width:16px;height:16px;"></i></a>
+          <a href="#" style="width:36px;height:36px;background:rgba(234,88,12,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--orange);"><i data-lucide="facebook" style="width:16px;height:16px;"></i></a>
+          <a href="#" style="width:36px;height:36px;background:rgba(234,88,12,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--orange);"><i data-lucide="phone" style="width:16px;height:16px;"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Ervaringen</h4>
+        <ul>
+          <li><a href="index.html#diensten">Live Escape Rooms</a></li>
+          <li><a href="index.html#diensten">Virtual Reality</a></li>
+          <li><a href="index.html#diensten">Outdoor Adventures</a></li>
+          <li><a href="index.html#diensten">Teambuilding</a></li>
+          <li><a href="index.html#diensten">Kinderfeestjes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informatie</h4>
+        <ul>
+          <li><a href="index.html#over-ons">Over Ons</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#faq">Veelgestelde Vragen</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#"><i data-lucide="map-pin" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>Witte de Withstraat 72, Rotterdam</a></li>
+          <li><a href="tel:0102345678"><i data-lucide="phone" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>010-234 5678</a></li>
+          <li><a href="mailto:info@raadselkamer.nl"><i data-lucide="mail" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>info@raadselkamer.nl</a></li>
+          <li><a href="#"><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>Ma-Zo: 10:00 - 22:00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 RaadselKamer. Alle rechten voorbehouden.</p>
+      <p>Website door <a href="https://www.studiolee.nl" target="_blank" rel="noopener">StudioLee</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STUDIOLEE BADGE ============ -->
+<a href="https://www.studiolee.nl/escaperooms" class="studiolee-badge" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+  Website door StudioLee
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('nav');
+  navToggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('open'));
+  });
+
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      onEnter: () => el.classList.add('active'),
+    });
+  });
+
+  gsap.from('.blog-card', {
+    y: 80,
+    opacity: 0,
+    stagger: 0.12,
+    duration: 0.8,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.blog-grid',
+      start: 'top 80%',
+    }
+  });
+
+  document.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, { y: -8, duration: 0.3, ease: 'power2.out' });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { y: 0, duration: 0.3, ease: 'power2.out' });
+    });
+  });
+
+  document.querySelectorAll('.blog-cat').forEach(cat => {
+    cat.addEventListener('click', () => {
+      document.querySelectorAll('.blog-cat').forEach(c => c.classList.remove('active'));
+      cat.classList.add('active');
+    });
+  });
+
+  gsap.to('.cta-bg', {
+    yPercent: 20,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.cta-section',
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+    }
+  });
+});
+</script>
+
+</body>
+</html>

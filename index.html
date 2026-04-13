@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RaadselKamer — Escape Room Rotterdam</title>
+  <meta name="description" content="RaadselKamer is de populairste escape room van Rotterdam. Live kamers, VR-ervaringen, outdoor puzzels en teambuilding voor alle leeftijden.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="logo">Raadsel<span>Kamer</span></a>
+    <nav class="nav" id="nav">
+      <a href="#diensten">Kamers</a>
+      <a href="#over-ons">Over Ons</a>
+      <a href="#galerij">Galerij</a>
+      <a href="#faq">FAQ</a>
+      <a href="blog.html">Blog</a>
+      <a href="#contact" class="nav-cta">Boek Nu</a>
+    </nav>
+    <div class="nav-toggle" id="navToggle" aria-label="Menu openen">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i data-lucide="lock" style="width:14px;height:14px;"></i>
+        Escape Rooms Rotterdam
+      </div>
+      <h1>Elk Raadsel heeft een <em>Oplossing</em></h1>
+      <p>RaadselKamer daagt je uit om samen te werken, logisch te denken en onder druk te presteren. Onze kamers vertellen een verhaal — jouw team schrijft het einde. Boek nu en ontdek of jij het raadsel kunt kraken.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">
+          <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+          Boek Direct
+        </a>
+        <a href="#diensten" class="btn-outline">
+          <i data-lucide="arrow-down" style="width:18px;height:18px;"></i>
+          Bekijk Kamers
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  <div class="ticker" style="background:var(--color-accent,#f5a623);padding:12px 0;overflow:hidden;">
+    <div style="display:flex;gap:48px;animation:tickerScroll 20s linear infinite;white-space:nowrap;">
+      <span><iconify-icon icon="lucide:lock"></iconify-icon> Live rooms</span><span><iconify-icon icon="lucide:glasses"></iconify-icon> VR</span><span><iconify-icon icon="lucide:map"></iconify-icon> Outdoor</span><span><iconify-icon icon="lucide:users"></iconify-icon> Teambuilding</span><span><iconify-icon icon="lucide:gift"></iconify-icon> Kinderfeest</span><span><iconify-icon icon="lucide:star"></iconify-icon> Custom</span><span><iconify-icon icon="lucide:lock"></iconify-icon> Live rooms</span><span><iconify-icon icon="lucide:glasses"></iconify-icon> VR</span><span><iconify-icon icon="lucide:map"></iconify-icon> Outdoor</span><span><iconify-icon icon="lucide:users"></iconify-icon> Teambuilding</span><span><iconify-icon icon="lucide:gift"></iconify-icon> Kinderfeest</span><span><iconify-icon icon="lucide:star"></iconify-icon> Custom</span>
+    </div>
+  </div>
+  <style>@keyframes tickerScroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}</style>
+  <style>.ticker span{display:inline-flex;align-items:center;gap:8px;font-size:0.85rem;font-weight:700;color:var(--color-bg,#0a0a0f);text-transform:uppercase;letter-spacing:0.05em;}</style>
+
+
+<!-- ============ SCROLL VIDEO (CANVAS) ============ -->
+<section class="scroll-video-section">
+  <div class="pin-wrap" id="scrollVideoPin">
+    <canvas id="scrollCanvas" width="1280" height="720"></canvas>
+    <div class="scroll-video-overlay">
+      <p><i data-lucide="mouse" style="width:16px;height:16px;display:inline;vertical-align:middle;margin-right:6px;"></i> scroll om de kamers te verkennen</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services section" id="diensten">
+  <div class="container">
+    <div class="reveal">
+      <h2 class="section-title">Onze <span class="accent">Ervaringen</span></h2>
+      <p class="section-subtitle">Van klassieke escape rooms tot virtual reality en stadsbrede avonturen — er is altijd een raadsel dat bij jouw groep past.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal stagger-1">
+        <div class="service-icon"><i data-lucide="lock"></i></div>
+        <h3>Live Escape Rooms</h3>
+        <p>Stap binnen in een van onze vijf thematische kamers en los de puzzels op binnen 60 minuten. Van een victoriaans herenhuis tot een onderzeeboot — elke kamer heeft zijn eigen verhaal, mechanismen en verrassingen.</p>
+      </div>
+      <div class="service-card reveal stagger-2">
+        <div class="service-icon"><i data-lucide="glasses"></i></div>
+        <h3>Virtual Reality</h3>
+        <p>Onze VR-escape rooms tillen het concept naar een ander niveau. Met draadloze headsets betreed je werelden die fysiek niet mogelijk zijn. Zweef door de ruimte, ontcijfer codes in een digitaal labyrint.</p>
+      </div>
+      <div class="service-card reveal stagger-3">
+        <div class="service-icon"><i data-lucide="map"></i></div>
+        <h3>Outdoor Adventures</h3>
+        <p>Rotterdam als speelveld. Onze outdoor escape games combineren GPS-navigatie met fysieke puzzels door de stad. Ontdek verborgen hoeken van Rotterdam terwijl je raadsels oplost tegen de klok.</p>
+      </div>
+      <div class="service-card reveal stagger-4">
+        <div class="service-icon"><i data-lucide="users"></i></div>
+        <h3>Teambuilding</h3>
+        <p>De perfecte teambuilding activiteit. Ontdek hoe je collega's denken, communiceren en samenwerken onder tijdsdruk. Inclusief professionele debriefing en teamanalyse. Voor groepen van 8 tot 100 personen.</p>
+      </div>
+      <div class="service-card reveal stagger-5">
+        <div class="service-icon"><i data-lucide="gift"></i></div>
+        <h3>Kinderfeestjes</h3>
+        <p>Het leukste kinderfeestje van Rotterdam. Onze kinderkamers zijn ontworpen voor 8 tot 14 jaar: spannend, creatief en veilig. Inclusief begeleiding, traktatie en een escape-diploma voor elke held.</p>
+      </div>
+      <div class="service-card reveal stagger-6">
+        <div class="service-icon"><i data-lucide="star"></i></div>
+        <h3>Custom Events</h3>
+        <p>Van een huwelijksaanzoek tot een productlancering — wij bouwen escape ervaringen op maat. Vertel ons jouw idee en wij maken er een onvergetelijk raadsel van, compleet met thema, puzzels en storyline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEFORE / AFTER ============ -->
+<section class="ba-section">
+  <div class="container">
+    <div class="ba-header reveal">
+      <h2 class="section-title">Voor vs. <span class="accent">Na</span> de Escape</h2>
+      <p class="section-subtitle" style="margin:0 auto;">Van nerveuze spanning naar euforische viering. Sleep om het verschil te zien.</p>
+    </div>
+    <div class="ba-container">
+      <img src="images/ba-after.jpg" class="ba-after" alt="Na de escape — euforisch team">
+      <img src="images/ba-before.jpg" class="ba-before" id="baBefore" alt="Voor de escape — gespannen team">
+      <div class="ba-label" id="baLabel">VOOR</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal stagger-1">
+        <h3 id="stat1">0</h3>
+        <p>Ontsnappingen</p>
+      </div>
+      <div class="stat-item reveal stagger-2">
+        <h3 id="stat2">0</h3>
+        <p>Escape Rooms</p>
+      </div>
+      <div class="stat-item reveal stagger-3">
+        <h3 id="stat3">0</h3>
+        <p>Puzzels</p>
+      </div>
+      <div class="stat-item reveal stagger-4">
+        <h3 id="stat4">0</h3>
+        <p>Google Reviews</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / TEAM ============ -->
+<section class="section" id="over-ons" style="background:var(--cream-dark);">
+  <div class="container about-grid">
+    <div class="reveal-left">
+      <img src="images/about.jpg" alt="Het RaadselKamer team" style="border-radius:var(--radius);box-shadow:0 20px 60px rgba(0,0,0,0.1);border:1px solid rgba(234,88,12,0.1);">
+    </div>
+    <div class="reveal-right">
+      <h2 class="section-title">Het <span class="accent">Team</span> Achter de Raadsels</h2>
+      <p style="color:var(--text-muted);font-size:0.92rem;line-height:1.9;margin-bottom:20px;">RaadselKamer is geboren uit een obsessie voor puzzels. Oprichters Tom en Eva hebben samen meer dan 500 escape rooms gespeeld over de hele wereld voordat ze besloten hun eigen kamers te bouwen in Rotterdam-Centrum.</p>
+      <p style="color:var(--text-muted);font-size:0.92rem;line-height:1.9;margin-bottom:28px;">Ons team van twaalf bestaat uit puzzelontwerpers, theatermakers, techneuten en gamemasters. Elke kamer is het resultaat van maanden ontwerp, testen en perfectioneren. Wij geloven dat de beste puzzels niet alleen slim zijn, maar ook een verhaal vertellen.</p>
+      <div style="display:flex;gap:16px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:8px;color:var(--orange);font-size:0.85rem;">
+          <i data-lucide="lock" style="width:18px;height:18px;"></i> 5 Thematische Kamers
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;color:var(--orange);font-size:0.85rem;">
+          <i data-lucide="glasses" style="width:18px;height:18px;"></i> VR Technologie
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;color:var(--orange);font-size:0.85rem;">
+          <i data-lucide="zap" style="width:18px;height:18px;"></i> Eigen Puzzeldesign
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials section" id="reviews">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <h2 class="section-title">Wat Onze <span class="accent">Spelers</span> Zeggen</h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Ervaringen van teams die het raadsel hebben gekraakt.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card reveal stagger-1">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+        </div>
+        <blockquote>"RaadselKamer is veruit de beste escape room van Rotterdam. De Onderzeeboot-kamer was ongelooflijk gedetailleerd — je voelde echt alsof je onder water zat. De puzzels waren slim maar eerlijk. Met 3 seconden over ontsnapt!"</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">PD</div>
+          <div>
+            <strong>Peter de Groot</strong><br>
+            <span>Team van 4 — De Onderzeeboot</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal stagger-2">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+        </div>
+        <blockquote>"We hebben hier ons bedrijfsuitje gedaan met 24 collega's. Drie kamers tegelijk, een ranking achteraf en borrels. De organisatie was perfect en de debriefing leverde verrassend veel inzichten op over ons team."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">SK</div>
+          <div>
+            <strong>Sandra Koster</strong><br>
+            <span>Teambuilding — 24 personen</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal stagger-3">
+        <div class="testimonial-stars">
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+          <i data-lucide="star" style="width:16px;height:16px;fill:var(--orange);"></i>
+        </div>
+        <blockquote>"Mijn dochter wilde per se een escape room feestje. De kinderkamer bij RaadselKamer was perfect: spannend genoeg om stoer te voelen, maar nooit eng. De begeleiders waren geweldig met de kinderen."</blockquote>
+        <div class="testimonial-author">
+          <div class="testimonial-avatar">AW</div>
+          <div>
+            <strong>Annemiek Willems</strong><br>
+            <span>Kinderfeestje — 10 kinderen</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery section" id="galerij">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <h2 class="section-title">De Kamers in <span class="accent">Beeld</span></h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Een glimp van wat je te wachten staat.</p>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item"><img src="images/hero.jpg" alt="Entree RaadselKamer" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/craft.jpg" alt="Puzzelmechanisme close-up" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/project1.jpg" alt="De Onderzeeboot kamer" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/project2.jpg" alt="Het Herenhuis kamer" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/kitchen.jpg" alt="Controlekamer" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/detail.jpg" alt="Sleutel detail" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/about.jpg" alt="Het team" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/team.jpg" alt="Gamemaster" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/carousel.jpg" alt="Spelers in actie" loading="lazy"></div>
+      <div class="gallery-item"><img src="images/cta-bg.jpg" alt="Sfeerbeeld" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq section" id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center;">
+      <h2 class="section-title">Veelgestelde <span class="accent">Vragen</span></h2>
+      <p class="section-subtitle" style="margin-left:auto;margin-right:auto;">Alles wat je moet weten voor je eerste escape bij RaadselKamer.</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Hoe lang duurt een escape room?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Elke kamer heeft 60 minuten speeltijd. Reken op 15 minuten introductie vooraf en 10 minuten nabespreking achteraf. In totaal ben je ongeveer anderhalf uur bij ons. We adviseren 10 minuten voor aanvang aanwezig te zijn.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Wat is de ideale groepsgrootte?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Onze kamers zijn geschikt voor 2 tot 8 spelers. De sweet spot ligt bij de meeste kamers op 4 tot 5 personen. Bij het boeken geven wij per kamer advies over de optimale groepsgrootte zodat iedereen actief mee kan doen.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Zijn jullie escape rooms eng?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Onze kamers zijn spannend maar niet horror-achtig. We werken met sfeer, verhaal en tijdsdruk — niet met jumpscares. Voor kinderen hebben we speciale kamers die uitdagend zijn zonder enge elementen. Bij twijfel bel ons en wij adviseren de juiste kamer.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Hoeveel procent ontsnapt er op tijd?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Gemiddeld ontsnapt 30 tot 40 procent van de teams op tijd, afhankelijk van de kamer. Maar maak je geen zorgen: onze gamemaster volgt je live en geeft hints als je vastloopt. Het draait om het plezier, niet alleen om het winnen.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-question">
+          <h3>Kan ik een cadeaubon kopen?</h3>
+          <i data-lucide="plus" class="faq-icon" style="width:20px;height:20px;"></i>
+        </div>
+        <div class="faq-answer">
+          <p>Jazeker. Cadeaubonnen zijn beschikbaar voor een specifieke kamer of voor een vrij bedrag. Je ontvangt de bon digitaal binnen 5 minuten of als fysiek cadeau per post. Geldig 12 maanden en inwisselbaar voor alle ervaringen.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section" id="contact">
+  <div class="cta-bg"></div>
+  <div class="cta-overlay"></div>
+  <div class="container">
+    <div class="reveal">
+      <h2>Klaar om het Raadsel te <span class="accent">Kraken</span>?</h2>
+      <p>Boek nu jouw escape room en daag jezelf uit. Eerste keer? Wij helpen je de perfecte kamer kiezen.</p>
+      <a href="#" class="btn-primary" style="margin:0 auto;">
+        <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+        Boek Nu
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Raadsel<span>Kamer</span></a>
+        <p>De populairste escape room van Rotterdam. Puzzels kraken, samenwerken en ontsnappen in thematische kamers.</p>
+        <div style="display:flex;gap:12px;margin-top:20px;">
+          <a href="#" style="width:36px;height:36px;background:rgba(234,88,12,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--orange);"><i data-lucide="instagram" style="width:16px;height:16px;"></i></a>
+          <a href="#" style="width:36px;height:36px;background:rgba(234,88,12,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--orange);"><i data-lucide="facebook" style="width:16px;height:16px;"></i></a>
+          <a href="#" style="width:36px;height:36px;background:rgba(234,88,12,0.08);border-radius:6px;display:flex;align-items:center;justify-content:center;color:var(--orange);"><i data-lucide="phone" style="width:16px;height:16px;"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4>Ervaringen</h4>
+        <ul>
+          <li><a href="#diensten">Live Escape Rooms</a></li>
+          <li><a href="#diensten">Virtual Reality</a></li>
+          <li><a href="#diensten">Outdoor Adventures</a></li>
+          <li><a href="#diensten">Teambuilding</a></li>
+          <li><a href="#diensten">Kinderfeestjes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informatie</h4>
+        <ul>
+          <li><a href="#over-ons">Over Ons</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#faq">Veelgestelde Vragen</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#"><i data-lucide="map-pin" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>Witte de Withstraat 72, Rotterdam</a></li>
+          <li><a href="tel:0102345678"><i data-lucide="phone" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>010-234 5678</a></li>
+          <li><a href="mailto:info@raadselkamer.nl"><i data-lucide="mail" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>info@raadselkamer.nl</a></li>
+          <li><a href="#"><i data-lucide="clock" style="width:14px;height:14px;display:inline;vertical-align:middle;margin-right:6px;"></i>Ma-Zo: 10:00 - 22:00</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 RaadselKamer. Alle rechten voorbehouden.</p>
+      <p>Website door <a href="https://www.studiolee.nl" target="_blank" rel="noopener">StudioLee</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STUDIOLEE BADGE ============ -->
+<a href="https://www.studiolee.nl/escaperooms" class="studiolee-badge" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+  Website door StudioLee
+</a>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  lucide.createIcons();
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Header scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const nav = document.getElementById('nav');
+  navToggle.addEventListener('click', () => nav.classList.toggle('open'));
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => nav.classList.remove('open'));
+  });
+
+  // Scroll Reveal
+  document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => {
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      onEnter: () => el.classList.add('active'),
+    });
+  });
+
+  // Scroll Video Canvas — fallback
+  const canvas = document.getElementById('scrollCanvas');
+  const ctx = canvas.getContext('2d');
+  const fallbackImg = new Image();
+  fallbackImg.src = 'images/craft.jpg';
+  fallbackImg.onload = () => {
+    const hRatio = canvas.width / fallbackImg.width;
+    const vRatio = canvas.height / fallbackImg.height;
+    const ratio = Math.max(hRatio, vRatio);
+    const cx = (canvas.width - fallbackImg.width * ratio) / 2;
+    const cy = (canvas.height - fallbackImg.height * ratio) / 2;
+    ctx.drawImage(fallbackImg, 0, 0, fallbackImg.width, fallbackImg.height, cx, cy, fallbackImg.width * ratio, fallbackImg.height * ratio);
+  };
+
+  // Before/After slider
+  const baBefore = document.getElementById('baBefore');
+  const baLabel = document.getElementById('baLabel');
+  if (baBefore) {
+    const baContainer = baBefore.parentElement;
+    let isDragging = false;
+
+    function updateBA(x) {
+      const rect = baContainer.getBoundingClientRect();
+      let pct = ((x - rect.left) / rect.width) * 100;
+      pct = Math.max(0, Math.min(100, pct));
+      baBefore.style.clipPath = 'inset(0 ' + (100 - pct) + '% 0 0)';
+      baLabel.textContent = pct > 50 ? 'VOOR' : 'NA';
+      baLabel.style.left = pct > 50 ? '24px' : 'auto';
+      baLabel.style.right = pct > 50 ? 'auto' : '24px';
+    }
+
+    baContainer.addEventListener('mousedown', e => { isDragging = true; updateBA(e.clientX); });
+    window.addEventListener('mousemove', e => { if (isDragging) updateBA(e.clientX); });
+    window.addEventListener('mouseup', () => { isDragging = false; });
+    baContainer.addEventListener('touchstart', e => { isDragging = true; updateBA(e.touches[0].clientX); });
+    window.addEventListener('touchmove', e => { if (isDragging) updateBA(e.touches[0].clientX); });
+    window.addEventListener('touchend', () => { isDragging = false; });
+
+    gsap.from(baContainer, {
+      scale: 0.9,
+      opacity: 0,
+      duration: 1,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.ba-section',
+        start: 'top 75%',
+      }
+    });
+  }
+
+  // Counter animations
+  function animateCounter(id, target, suffix) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    ScrollTrigger.create({
+      trigger: el,
+      start: 'top 85%',
+      onEnter: () => {
+        gsap.to({ val: 0 }, {
+          val: target,
+          duration: 2,
+          ease: 'power2.out',
+          onUpdate: function() {
+            el.textContent = Math.round(this.targets()[0].val).toLocaleString('nl-NL') + suffix;
+          }
+        });
+      },
+      once: true
+    });
+  }
+  animateCounter('stat1', 22000, '+');
+  animateCounter('stat2', 10, '');
+  animateCounter('stat3', 480, '+');
+  animateCounter('stat4', 4.8, '');
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const wasActive = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!wasActive) item.classList.add('active');
+    });
+  });
+
+  // Gallery hover
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      gsap.to(item, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+    });
+    item.addEventListener('mouseleave', () => {
+      gsap.to(item, { scale: 1, duration: 0.3, ease: 'power2.out' });
+    });
+  });
+
+  // Service cards hover
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card.querySelector('.service-icon'), { rotate: 10, scale: 1.15, duration: 0.3 });
+    });
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card.querySelector('.service-icon'), { rotate: 0, scale: 1, duration: 0.3 });
+    });
+  });
+
+  // Parallax hero
+  gsap.to('.hero-bg', {
+    yPercent: 30,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true,
+    }
+  });
+
+  // Testimonial stagger
+  gsap.from('.testimonial-card', {
+    y: 60,
+    opacity: 0,
+    stagger: 0.15,
+    duration: 0.8,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '.testimonials-grid',
+      start: 'top 80%',
+    }
+  });
+
+  // Stats text glow
+  gsap.to('.stat-item h3', {
+    textShadow: '0 0 20px rgba(234,88,12,0.4)',
+    repeat: -1,
+    yoyo: true,
+    duration: 2,
+    ease: 'sine.inOut'
+  });
+
+  // Hero title subtle animation
+  const heroTitle = document.querySelector('.hero h1');
+  if (heroTitle) {
+    setInterval(() => {
+      gsap.to(heroTitle, {
+        skewX: () => Math.random() * 1.5 - 0.75,
+        duration: 0.1,
+        onComplete: () => gsap.to(heroTitle, { skewX: 0, duration: 0.1 })
+      });
+    }, 5000);
+  }
+});
+</script>
+
+</body>
+</html>
